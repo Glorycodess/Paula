@@ -10,7 +10,9 @@ function App() {
 
       <main>
         <section id="hero">
-          <div className="hero-avatar">P</div>
+          <div className="hero-avatar">
+            <img src="/Paula.JPG" alt="Paula" />
+          </div>
           <h1 className="wave-text" aria-label="Hi, I'm Paula">
             {"Hi, I'm Paula".split('').map((char, i) => (
               <span key={i} style={{ animationDelay: `${i * 0.07}s` }}>
