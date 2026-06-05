@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { marked } from 'marked'
 
 const postModules = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' })
 
@@ -19,6 +18,61 @@ function parseFrontmatter(raw) {
 
 function getSlug(path) {
   return path.replace('../posts/', '').replace('.md', '')
+}
+
+function SubscribeForm() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState(null)
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    setStatus('loading')
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      await res.json()
+      if (res.status === 409) { setStatus('duplicate'); return }
+      if (!res.ok) { setStatus('error'); return }
+      setStatus('success')
+      setEmail('')
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  return (
+    <section className="subscribe-section">
+      <h2>Stay in the loop</h2>
+      <p>Get new posts delivered straight to your inbox.</p>
+      {status === 'success' ? (
+        <p className="subscribe-feedback">You're in! Check your inbox for a welcome email.</p>
+      ) : status === 'duplicate' ? (
+        <p className="subscribe-feedback">You're already subscribed — no need to sign up again.</p>
+      ) : (
+        <form className="subscribe-form" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="your@email.com"
+            required
+            className="subscribe-input"
+            disabled={status === 'loading'}
+          />
+          <button type="submit" className="subscribe-btn" disabled={status === 'loading'}>
+            {status === 'loading' ? 'Subscribing…' : 'Subscribe'}
+          </button>
+          {status === 'error' && (
+            <p className="subscribe-feedback error">Something went wrong. Please try again.</p>
+          )}
+        </form>
+      )}
+    </section>
+  )
 }
 
 function formatDate(dateStr) {
@@ -75,6 +129,7 @@ export default function Blog() {
           </Link>
         ))}
       </div>
+      <SubscribeForm />
     </main>
   )
 }
