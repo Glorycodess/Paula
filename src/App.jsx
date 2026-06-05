@@ -20,7 +20,7 @@ function App() {
               </span>
             ))}
           </h1>
-          <p className="tagline">Financial trader, Deep Learning ML/AI</p>
+          <p className="tagline">Financial Market trader, Machine Learning Engineer</p>
         </section>
 
         <section id="contact">
