@@ -23,7 +23,7 @@ function App() {
 
         <section id="contact">
           <h2>Get in touch</h2>
-          <p>Feel free to reach out — I'd love to connect.</p>
+          <p>Feel free to reach out, I'd love to connect.</p>
           <ul className="contact-links">
             <li>
               <a href="mailto:iambigpaula@gmail.com">
