@@ -407,6 +407,45 @@ footer {
   gap: 10px;
 }
 
+.post-author-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.post-author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+}
+
+.post-author-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+}
+
+.post-author-meta strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.post-author-meta time {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
 .post-header h1 {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;

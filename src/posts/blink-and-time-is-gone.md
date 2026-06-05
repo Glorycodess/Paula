@@ -11,7 +11,7 @@ Now here's the thing, Faith would leave the house as early as 6am, so usually I 
 
 Close to my school, there was this woman who sold soft drinks, groundnuts and bananas. And Faith would always stop by her shop to help the lady bring things out before we continued walking to school.
 
-On good days, this woman would give Faith and I extra ₦100-200 or even soft drinks — and this would always make our day. After school, we'd wave this woman goodbye as we walked back home. My guess is that she stayed there 6am-6pm every day.
+On good days, this woman would give Faith and I extra ₦100-200 or even soft drinks and this would always make our day. After school, we'd wave this woman goodbye as we walked back home. My guess is that she stayed there 6am-6pm every day.
 
 You see, I've been out of Junior secondary school for a long time. "Faith" is now a big girl. She's always been older than me. She and I don't even talk anymore and we haven't seen each other for more than 5 years.
 

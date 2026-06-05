@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { marked } from 'marked'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+
+dayjs.extend(relativeTime)
 
 const postModules = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' })
 
@@ -17,10 +21,8 @@ function parseFrontmatter(raw) {
   return { data, content: match[2] }
 }
 
-function formatDate(dateStr) {
-  return new Date(dateStr).toLocaleDateString('en-US', {
-    year: 'numeric', month: 'long', day: 'numeric',
-  })
+function relativeDate(dateStr) {
+  return dayjs(dateStr).fromNow()
 }
 
 function CopyLinkButton() {
@@ -87,13 +89,21 @@ export default function BlogPost() {
     <main className="post-main">
       <div className="post-nav-row">
         <Link to="/blog" className="back-link">← Back to Blog</Link>
-        <CopyLinkButton />
       </div>
       <article>
         <header className="post-header">
           <span className="post-category">{post.category}</span>
           <h1>{post.title}</h1>
-          <time className="post-date">{formatDate(post.date)}</time>
+          <div className="post-author-row">
+            <div className="post-author-info">
+              <img src="/Paula.JPG" alt="Paula" className="post-author-avatar" />
+              <div className="post-author-meta">
+                <strong>Paula</strong>
+                <time>{relativeDate(post.date)}</time>
+              </div>
+            </div>
+            <CopyLinkButton />
+          </div>
         </header>
         <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>
