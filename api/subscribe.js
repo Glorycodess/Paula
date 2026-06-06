@@ -37,12 +37,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Failed to save email' })
   }
 
-  if (insertRes.status === 409) {
-    return res.status(409).json({ error: 'Already subscribed' })
-  }
   if (!insertRes.ok) {
-    const body = await insertRes.text()
-    console.error('Supabase insert failed —', insertRes.status, body)
+    const text = await insertRes.text()
+    let errBody
+    try { errBody = JSON.parse(text) } catch { errBody = {} }
+    if (insertRes.status === 409 || errBody.code === '23505') {
+      return res.status(409).json({ error: 'Already subscribed' })
+    }
+    console.error('Supabase insert failed —', insertRes.status, text)
     return res.status(500).json({ error: 'Failed to save email' })
   }
 

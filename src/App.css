@@ -11,6 +11,7 @@
   --border: #e5e7eb;
   --accent: #111827;
   --accent-hover: #374151;
+  --subscribe-bg: #f8f9fa;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text);
   background: var(--bg);
@@ -23,6 +24,7 @@
   --border: #1f2937;
   --accent: #e5e7eb;
   --accent-hover: #d1d5db;
+  --subscribe-bg: #13181f;
 }
 
 [data-theme="dark"] body,
@@ -515,43 +517,46 @@ footer {
 
 /* Subscribe */
 .subscribe-section {
-  margin-top: 72px;
-  padding-top: 48px;
-  border-top: 1px solid var(--border);
-  max-width: 480px;
+  margin-top: 80px;
+  padding: 48px;
+  background: var(--subscribe-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
 }
 
 .subscribe-section h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
 }
 
 .subscribe-section > p {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 400px;
 }
 
 .subscribe-form {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
+  max-width: 520px;
 }
 
 .subscribe-input {
   flex: 1;
   min-width: 0;
-  padding: 9px 14px;
-  font-size: 14px;
+  padding: 11px 16px;
+  font-size: 15px;
   font-family: inherit;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--bg);
   color: var(--text);
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .subscribe-input::placeholder {
@@ -560,20 +565,26 @@ footer {
 
 .subscribe-input:focus {
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.06);
+}
+
+[data-theme="dark"] .subscribe-input:focus {
+  box-shadow: 0 0 0 3px rgba(229, 231, 235, 0.08);
 }
 
 .subscribe-btn {
-  padding: 9px 18px;
+  padding: 11px 22px;
   font-size: 14px;
   font-family: inherit;
   font-weight: 600;
+  letter-spacing: -0.01em;
   background: var(--accent);
   color: var(--bg);
   border: 1px solid var(--accent);
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s, opacity 0.2s;
   white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
 }
 
 .subscribe-btn:hover:not(:disabled) {
@@ -582,29 +593,45 @@ footer {
 }
 
 .subscribe-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
 .subscribe-feedback {
   font-size: 14px;
   color: var(--text-muted);
-  margin-top: 2px;
+  margin-top: 14px;
+  line-height: 1.5;
 }
 
 .subscribe-feedback.error {
   color: #ef4444;
 }
 
-/* Responsive */
+/* Responsive — tablet */
+@media (max-width: 768px) {
+  nav {
+    padding: 12px 24px;
+  }
+
+  .blog-main,
+  .post-main {
+    padding: 48px 24px;
+  }
+
+  .subscribe-section {
+    padding: 36px 32px;
+  }
+}
+
+/* Responsive — mobile */
 @media (max-width: 640px) {
   nav {
-    padding: 12px 20px;
-    gap: 12px;
+    padding: 10px 16px;
   }
 
   .nav-center {
-    gap: 18px;
+    gap: 16px;
   }
 
   .nav-link {
@@ -612,19 +639,66 @@ footer {
   }
 
   #hero {
-    padding: 72px 20px;
+    padding: 60px 16px;
+    gap: 16px;
+  }
+
+  .tagline {
+    font-size: 1rem;
   }
 
   #contact {
-    padding: 60px 20px;
+    padding: 52px 16px;
   }
 
   .blog-main,
   .post-main {
-    padding: 40px 20px;
+    padding: 32px 16px;
+  }
+
+  .blog-header {
+    margin-bottom: 32px;
+  }
+
+  .blog-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .post-nav-row {
+    margin-bottom: 28px;
+  }
+
+  .post-header {
+    margin-bottom: 32px;
+  }
+
+  .post-author-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .subscribe-section {
+    padding: 28px 20px;
+    margin-top: 56px;
+    border-radius: 12px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .subscribe-btn {
+    width: 100%;
   }
 
   footer {
-    padding: 20px;
+    padding: 20px 16px;
   }
 }
