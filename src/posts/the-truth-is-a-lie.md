@@ -33,6 +33,4 @@ I miss Danny. And it is absurd that I say this because I barely knew him more th
 
 Whether he lived a good life here or not does not matter to anyone now, as they too are concerned about their own lives. Death has never stopped anyone from moving forward.
 
-So while you are here, live life for you.
-
-If you must take anything from this, take what Ralph Waldo Emerson said: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment." and remember, The only thing we have to fear is fear itself.
+So while you are here, live life for you. And remember, the only thing we have to fear is fear itself.
