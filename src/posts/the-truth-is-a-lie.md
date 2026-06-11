@@ -27,7 +27,7 @@ I cannot count how many times I was told "you will go to hell fire" as a child, 
 
 I have read many books and listened to many perspectives over my two decades of being alive. Someone who interests me is Friedrich Nietzsche, a German philosopher, and his idea that morality is a social construct. He believed that what we know as truth is really just opinion passed down through generations. And while that seems unsettling, it made me question so much more. Take something as simple as "do not lie, because it is bad." But what if that lie was going to save a life? Who condemns it as bad, then? Would I be good if I told the truth and someone innocent lost their life because of it?
 
-Albert Camus wrote that "life has no inherent meaning, so you must create your own." Not depressing, actually liberating. And as I revisit the perspectives of men and women who lived before me, I start to see truth outside of everything I was always told to believe.
+Albert Camus argued that life has no inherent meaning, but rather than creating meaning, he believed one must embrace the absurdity of existence and continue living in spite of it, Not depressing, actually liberating. And as I revisit the perspectives of men and women who lived before me, I start to see truth outside of everything I was always told to believe.
 
 I miss Danny. And it is absurd that I say this because I barely knew him more than a teenage boy who had big dreams. But I miss him still. Yet this feeling does not stop me from living my life and loving others. Everyone expects me to. He probably does too.
 
