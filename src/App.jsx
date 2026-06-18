@@ -16,12 +16,11 @@ function HomePage() {
             </span>
           ))}
         </h1>
-        <p className="tagline">Financial Market trader, Machine Learning Engineer</p>
+        <p className="tagline">Trader. Quantitative/Machine Learning Engineer.</p>
       </section>
 
       <section id="contact">
         <h2>Get in touch</h2>
-        <p>Feel free to reach out, I'd love to connect.</p>
         <ul className="contact-links">
           <li>
             <a href="https://x.com/iambigpaula" target="_blank" rel="noopener noreferrer">
