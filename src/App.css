@@ -11,7 +11,7 @@
   --border: #e5e7eb;
   --accent: #111827;
   --accent-hover: #374151;
-  --subscribe-bg: #f8f9fa;
+
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text);
   background: var(--bg);
@@ -24,7 +24,7 @@
   --border: #1f2937;
   --accent: #e5e7eb;
   --accent-hover: #d1d5db;
-  --subscribe-bg: #13181f;
+
 }
 
 [data-theme="dark"] body,
@@ -520,98 +520,6 @@ footer {
   color: var(--text-muted);
 }
 
-/* Subscribe */
-.subscribe-section {
-  margin-top: 80px;
-  padding: 48px;
-  background: var(--subscribe-bg);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-}
-
-.subscribe-section h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-}
-
-.subscribe-section > p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 28px;
-  max-width: 400px;
-}
-
-.subscribe-form {
-  display: flex;
-  gap: 8px;
-  max-width: 520px;
-}
-
-.subscribe-input {
-  flex: 1;
-  min-width: 0;
-  padding: 11px 16px;
-  font-size: 15px;
-  font-family: inherit;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg);
-  color: var(--text);
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.subscribe-input::placeholder {
-  color: var(--text-muted);
-}
-
-.subscribe-input:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.06);
-}
-
-[data-theme="dark"] .subscribe-input:focus {
-  box-shadow: 0 0 0 3px rgba(229, 231, 235, 0.08);
-}
-
-.subscribe-btn {
-  padding: 11px 22px;
-  font-size: 14px;
-  font-family: inherit;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  background: var(--accent);
-  color: var(--bg);
-  border: 1px solid var(--accent);
-  border-radius: 8px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
-}
-
-.subscribe-btn:hover:not(:disabled) {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-}
-
-.subscribe-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.subscribe-feedback {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-top: 14px;
-  line-height: 1.5;
-}
-
-.subscribe-feedback.error {
-  color: #ef4444;
-}
 
 /* Responsive — tablet */
 @media (max-width: 768px) {
@@ -624,9 +532,6 @@ footer {
     padding: 48px 24px;
   }
 
-  .subscribe-section {
-    padding: 36px 32px;
-  }
 }
 
 /* Responsive — mobile */
@@ -686,21 +591,6 @@ footer {
   .post-author-row {
     flex-wrap: wrap;
     gap: 8px;
-  }
-
-  .subscribe-section {
-    padding: 28px 20px;
-    margin-top: 56px;
-    border-radius: 12px;
-  }
-
-  .subscribe-form {
-    flex-direction: column;
-    max-width: 100%;
-  }
-
-  .subscribe-btn {
-    width: 100%;
   }
 
   footer {

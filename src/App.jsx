@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route, Link, NavLink } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
 
 function HomePage() {
   return (
@@ -80,7 +78,6 @@ function App() {
         </Link>
         <div className="nav-center">
           <Link to="/" className="nav-link">About</Link>
-          <NavLink to="/blog" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Blog</NavLink>
         </div>
         <button
           className="theme-toggle"
@@ -109,8 +106,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
 
       <footer>
