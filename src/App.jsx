@@ -17,6 +17,7 @@ function HomePage() {
       </section>
 
       <section id="contact">
+        <h2>Connect with me</h2>
         <ul className="social-icons">
           <li>
             <a href="https://wa.link/k11ta3" target="_blank" rel="noopener noreferrer">
